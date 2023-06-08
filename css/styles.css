@@ -51,12 +51,6 @@ body {
 padding-left: 15px;
 padding-right: 15px;}
   }
-/*.container {
-  width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 15px;
-}*/
 
 :root {
   --maim-color-text: #2e2f42;
@@ -394,40 +388,39 @@ gap: 40px;}
 }
 /*--------HeroMobile-------------*/
   .hero {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    padding-top: 112px;
-      padding-bottom: 240px;
-      background-color: #2e2f42;
-      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)),
-        url('../images/1x/Hero-m.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-        @media (min-device-pixel-ratio: 2) and (max-width: 767px),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-          .hero {
-            background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                  rgba(46, 47, 66, 0.7)),
-                url('../images/2x/Hero-m@2x.jpg');
-            
-          }
-        }
-        .hero-title {
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: 48px;
-          font-weight: 700;
-          font-size: 36px;
-          line-height: 1.11;
-          text-align: center;
-          letter-spacing: 0.02em;
-          color: #ffffff;
-        }
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 112px;
+  padding-bottom: 240px;
+  background-color: #2e2f42;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+    url('../images/1x/Hero-m.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  }
+  @media (min-device-pixel-ratio: 2) and (max-width: 767px),
+         (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+  .hero {
+   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)),
+      url('../images/2x/Hero-m@2x.jpg');
+   }
+   }
+  .hero-title {
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 48px;
+   font-weight: 700;
+   font-size: 36px;
+   line-height: 1.11;
+   text-align: center;
+   letter-spacing: 0.02em;
+   color: #ffffff;
+   }
 .order-button {
   min-width: 169px;
   padding: 16px 32px;
@@ -486,7 +479,7 @@ width: 496px;
 @media (min-device-pixel-ratio: 2) and (max-width: 1157px),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
-  .hero {
+.hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
       url('../images/2x/Hero-d@2x.jpg');
@@ -521,7 +514,7 @@ font-weight: 700;
   row-gap: 72px;
 }
 .adv-item {
-  flex-basis: calc((100% - 24px) / 2);
+  width: calc((100% - 24px) / 2);
 }
 }
 
@@ -857,7 +850,6 @@ flex-wrap: unset;
 .advertising-slogan {
   text-align: center;
   margin-bottom: 72px;
-  /*margin-right: 120px;*/
 }
 .social-list-link-us {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -875,9 +867,7 @@ flex-wrap: unset;
 margin-bottom: 72px;
 }
 .subscribe {
- /* position: relative;
-  width: 453px;*/
-  height: 80px;
+  /*height: 80px;*/
   padding-bottom: 5px;
 }
 .subscribe-title {
@@ -887,12 +877,10 @@ margin-bottom: 72px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
-  /*margin-bottom: 16px;*/
 }
 .subscribe-form {
   display: flex;
   flex-direction: column;
- /* justify-content: center;*/
 }
 .subscribe-form-input {
   width: 100%;
@@ -916,9 +904,6 @@ margin-bottom: 72px;
   min-width: 165px;
   height: 40px;
   display: flex;
-  /*flex-direction: row;
-  justify-content: center;
-  align-items: center;*/
   padding: 8px 24px;
   margin-left: auto;
   margin-right: auto;
@@ -933,11 +918,54 @@ margin-bottom: 72px;
 /*-------Footer Tablet--------*/
 @media screen and (min-width: 768px) {
 .underside-container {
-  display: flex;
   align-items: baseline;
 }
-.logo-and-social {display: flex;}
-  
+.logo-and-social {
+  display: flex;
+margin-left: 108px;
+margin-right: auto;
+gap: 24px;
+}
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  margin-left: 108px;
+
+}
+.subscribe-title {
+  text-align: unset;
+  margin-bottom: 16px;
+}
+.subscribe-form-input {
+  width: 264px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.form-and-btn {
+  display: flex;
+  gap: 24px;
+}
+}
+/*-------Footer Desktop--------*/
+@media screen and (min-width: 1158px) {
+  .underside {
+    padding: 100px 0;
+  }
+.underside-container{
+  flex-direction: unset;
+  margin-left: 0;
+  margin-right: 0;
+}
+.advertising-slogan {
+  width: 264px;
+  text-align: unset;
+  margin-bottom: 0;
+}
+.logo-and-social {
+  margin-left: 141px;
+  gap: 120px;
+}
+.social-media {margin-bottom: 0;}
 }
 /*--------------Modal Window---------------*/
 .backdrop {
