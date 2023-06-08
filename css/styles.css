@@ -954,8 +954,6 @@ gap: 24px;
   }
 .underside-container{
   flex-direction: unset;
- /* margin-left: 0;
-  margin-right: 0;*/
 }
 .advertising-slogan {
   width: 264px;
