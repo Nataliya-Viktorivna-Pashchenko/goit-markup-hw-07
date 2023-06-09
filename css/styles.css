@@ -155,6 +155,11 @@ padding-right: 15px;}
       padding-left: 40px;
       padding-right: 35px;
     }
+        .mobile-contact-list {
+          display: flex;
+          flex-direction: column;
+          row-gap: 40px;
+        }
    .mobile-menu-link {
         font-weight: 700;
     font-size: 36px;
@@ -182,7 +187,7 @@ font-weight: 500;
   display: flex;
     justify-content:space-between ;
     gap: 40px;
-   margin-top: 40px;
+   margin-top: 48px;
    margin-bottom: 40px;
   margin-right: 44px;}
 
@@ -391,7 +396,7 @@ gap: 40px;}
   align-items: center;
   margin: 0 auto;
   padding-top: 112px;
-  padding-bottom: 240px;
+  padding-bottom: 112px;
   background-color: #2e2f42;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)),
@@ -445,6 +450,7 @@ gap: 40px;}
 /*--------HeroTablet-------------*/
 @media screen and (min-width:768px) {
   .hero-title {
+    width: 496px;
     font-size: 56px;
     line-height: 1.07;
 }
@@ -467,13 +473,13 @@ gap: 40px;}
 /*--------HeroDesktop-------------*/
 @media screen and (min-width:1158px) {
   .hero {
+    max-width: 1440px;
+    padding-top: 188px;
+    padding-bottom: 188px;
       background-image: linear-gradient(rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)),
         url('../images/1x/Hero-d.jpg');
     }
-  .hero-title {
-width: 496px;
-  }
 }
 @media (min-device-pixel-ratio: 2) and (max-width: 1157px),
 (min-resolution: 192dpi),
@@ -490,13 +496,15 @@ width: 496px;
 padding-top: 96px;
 padding-bottom: 96px;
 }
-
+.adv-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 72px;
+}
 .adv-item-title {
 text-align: center;
 font-weight: 700;
-}
-.adv-item {
-  margin-bottom: 72px;
+font-size: 36px;
 }
 .adv-item-icon-bg {
   display: none;
@@ -507,12 +515,12 @@ font-weight: 700;
 @media screen and (min-width:768px) {
 
 .adv-list {
-  display: flex;
+  flex-direction: unset;
   flex-wrap: wrap;
   column-gap: 24px;
-  row-gap: 72px;
 }
 .adv-item {
+  margin-bottom: 0;
   width: calc((100% - 24px) / 2);
 }
 .adv-item-title {
@@ -531,7 +539,6 @@ font-weight: 700;
     padding-bottom: 120px;
   }
   .adv-list {
-    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -550,6 +557,7 @@ font-weight: 700;
     }
     .adv-item-title {
       font-weight: 500;
+      font-size: 20px;
     }
 
 }
@@ -927,6 +935,9 @@ margin-left: 108px;
 margin-right: auto;
 gap: 24px;
 }
+.advertising-slogan {
+  text-align: unset;
+}
 .subscribe {
   display: flex;
   flex-direction: column;
@@ -941,6 +952,9 @@ gap: 24px;
   width: 264px;
   margin-top: 0;
   margin-bottom: 0;
+}
+.sm-title {
+  text-align: left;
 }
 .form-and-btn {
   display: flex;
@@ -957,7 +971,6 @@ gap: 24px;
 }
 .advertising-slogan {
   width: 264px;
-  text-align: unset;
   margin-bottom: 0;
 }
 .logo-and-social {
